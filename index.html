@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top">
+        <h1 class="title">Web BlueTooth</h1>
+    </div>
+    <div class="body">
+        <div class="connect_box">
+            <h2>Web BlueTooth</h2>
+            <ol>
+                <li id="UI_Connected">连接状态：未连接</li>
+                <li id="UI_DeviceType">设备类型：未知</li>
+            </ol>
+            <button id="MBtn" onclick="DiscoveOrDisConnect()">连接</button>
+        </div>
+        <div class="leds_box">
+            <h2>LED控制
+                <span id="led_stat">不可用</span>
+            </h2>
+            <table class="led_table" id="leds">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="info_box">
+            <div class="sensor_1">
+                <h2>加速度传感器
+                    <span id="acceleration_stat">不可用</span>
+                </h2>
+                <p>值：
+                    <span id="acceleration_value">X=0 Y=0 Z=0</span>
+                </p>
+            </div>
+            <div class="sensor_2">
+                <h2>温度传感器
+                    <span id="temperaturer_stat">不可用</span>
+                </h2>
+                <p>
+                    值：
+                    <span id="temperaturer_value">0 摄氏度</span>
+                </p>
+            </div>
+        </div>
+        <div class="set_string_box">
+            <h2>设置字符串
+                <span id="setstr_stat">不可用</span>
+            </h2>
+            <div>
+                <input type="text" id="input_str" maxlength="10" spellcheck="false" onkeyup="this.value=this.value.replace(/[^\w_]/g,'');">
+                <button id="SCtn" onclick="SetString()">设置</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./Script.js"></script>
+</html>
