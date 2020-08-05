@@ -71,8 +71,8 @@ function DiscoverDevice() {
     //过滤出我们需要的蓝牙设备
     //过滤器
     var options = {
-        filters: [{ namePrefix: 'BBC' }],
-        optionalServices: [DEVICE_INFORMATION_SERVICE, ACCELEROMETER_SERVICE, LED_SERVICE, UART_SERVICE, TEMPERATURE_SERVICE]
+        filters: [{ namePrefix: 'E' }]
+        //,optionalServices: [DEVICE_INFORMATION_SERVICE, ACCELEROMETER_SERVICE, LED_SERVICE, UART_SERVICE, TEMPERATURE_SERVICE]
     };
 
     navigator.bluetooth.requestDevice(options)
